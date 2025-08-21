@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-uvg22-_0nszc_k=c22&28*nc1x)*=0o1mvqfgwy3z_ln-ke1-g
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://loan-backend-nqsi.onrender.com']
 
 
 # Application definition
