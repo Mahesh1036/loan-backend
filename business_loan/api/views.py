@@ -1,7 +1,22 @@
+
+# Imports
 from rest_framework import generics, permissions
+from rest_framework.views import APIView
+from rest_framework.response import Response
 from django.contrib.auth.models import User
 from .models import UserProfile, BusinessDetails, LoanApplication
 from .serializers import *
+
+# Endpoint to return current user info
+class CurrentUserView(APIView):
+    permission_classes = [permissions.IsAuthenticated]
+    def get(self, request):
+        user = request.user
+        return Response({
+            "id": user.id,
+            "username": user.username,
+            "email": user.email
+        })
 
 
 class RegisterView(generics.CreateAPIView):

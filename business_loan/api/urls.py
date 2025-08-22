@@ -11,4 +11,5 @@ urlpatterns = [
     path('loans/', LoanApplicationView.as_view()),
     path('profile/exists/', ProfileExistsView.as_view()),
     path('business/exists/', BusinessExistsView.as_view()),
+    path('user/me/', CurrentUserView.as_view()),
 ]
